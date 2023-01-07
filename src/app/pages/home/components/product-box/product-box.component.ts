@@ -8,15 +8,7 @@ import { Product } from "src/app/models/product.model";
 export class ProductBoxComponent implements OnInit {
   @Input() fullWidthMode = false;
   @Output() addToCart = new EventEmitter();
-  product: Product | undefined = {
-    id: 1,
-    title: "law of attraction planner",
-    price: 29.99,
-    category: "book",
-    desctiption: "law of attraction planner",
-    image:
-      "https://images-na.ssl-images-amazon.com/images/I/51Zy9ZQZQlL._SX331_BO1,204,203,200_.jpg",
-  };
+  @Input() product: Product | undefined;
   constructor() {}
 
   ngOnInit(): void {}

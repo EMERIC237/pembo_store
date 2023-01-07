@@ -26,7 +26,7 @@
     <ng-container matColumnDef="quantity">
       <th mat-header-cell *matHeaderCellDef>Quantity</th>
       <td mat-cell *matCellDef="let element">
-        <button (click)="onRemoveItemQuantity(element)"  mat-icon-button>
+        <button (click)="onRemoveItemQuantity(element)" mat-icon-button>
           <mat-icon>remove</mat-icon>
         </button>
         <span> {{ element.quantity }}</span>
@@ -69,7 +69,12 @@
         </button>
       </td>
       <td mat-footer-cell *matFooterCellDef>
-        <button mat-raised-button color="primary" class="float-right">
+        <button
+          (click)="onCheckout()"
+          mat-raised-button
+          color="primary"
+          class="float-right"
+        >
           Proceed to Checkout
         </button>
       </td>

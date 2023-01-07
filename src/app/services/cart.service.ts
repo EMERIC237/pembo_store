@@ -26,7 +26,6 @@ export class CartService {
     this.cart.next({ items });
     // Display a message to the user
     this._snackar.open("Added to cart", "OK", { duration: 3000 });
-    console.log(this.cart.value);
   }
 
   calculateTotal(items: Array<CartItem>): number {
@@ -66,5 +65,6 @@ export class CartService {
     });
 
     this.cart.next({ items: updateItems });
+    this._snackar.open(`1 ${item.name} was reduced`);
   }
 }
